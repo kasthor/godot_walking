@@ -1,4 +1,6 @@
-Godot Walking Demo
+Deforester
 ==
 
-Just a regular character that can walk around a randomly generated map
+Plot:
+--
+An angry skeleton hates trees and chop them off

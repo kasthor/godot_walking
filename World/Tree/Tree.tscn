@@ -1,0 +1,57 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Assets/World/Decor/Stump3.png" type="Texture" id=1]
+[ext_resource path="res://Assets/World/Decor/Stump1.png" type="Texture" id=2]
+[ext_resource path="res://Assets/World/Decor/Tree2.png" type="Texture" id=3]
+[ext_resource path="res://World/Tree/Tree.gd" type="Script" id=4]
+[ext_resource path="res://Assets/World/Decor/Tree1.png" type="Texture" id=5]
+[ext_resource path="res://Assets/World/Decor/Stump2.png" type="Texture" id=6]
+[ext_resource path="res://Assets/World/Decor/Tree3.png" type="Texture" id=7]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 6 ) ],
+"loop": true,
+"name": "Stump2",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ) ],
+"loop": true,
+"name": "Tree3",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "Tree2",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ) ],
+"loop": true,
+"name": "Tree1",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "Stump1",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 1 ) ],
+"loop": true,
+"name": "Stump3",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 29.1893, 13.347 )
+
+[node name="Tree" type="KinematicBody2D"]
+script = ExtResource( 4 )
+
+[node name="Sprite" type="AnimatedSprite" parent="."]
+position = Vector2( 0, -113.102 )
+frames = SubResource( 1 )
+animation = "Stump3"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 7.93701, -15.0803 )
+shape = SubResource( 2 )

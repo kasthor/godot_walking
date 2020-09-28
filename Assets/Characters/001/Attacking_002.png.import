@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Decor.png-c6708bb993078a9ee5194e72fb258bcf.stex"
+path="res://.import/Attacking_002.png-33b6bfaac5fa230ec4fb5821070aa563.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/World/Decor/Decor.png"
-dest_files=[ "res://.import/Decor.png-c6708bb993078a9ee5194e72fb258bcf.stex" ]
+source_file="res://Assets/Characters/001/Attacking_002.png"
+dest_files=[ "res://.import/Attacking_002.png-33b6bfaac5fa230ec4fb5821070aa563.stex" ]
 
 [params]
 

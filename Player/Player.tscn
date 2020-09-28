@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=2]
+[gd_scene load_steps=47 format=2]
 
 [ext_resource path="res://Assets/Characters/001/Walking_000.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Characters/001/Walking_002.png" type="Texture" id=2]
@@ -31,33 +31,62 @@
 [ext_resource path="res://Assets/Characters/001/Walking_005.png" type="Texture" id=29]
 [ext_resource path="res://Assets/Characters/001/Walking_007.png" type="Texture" id=30]
 [ext_resource path="res://Assets/Characters/001/Walking_006.png" type="Texture" id=31]
+[ext_resource path="res://Assets/Characters/001/Attacking_001.png" type="Texture" id=32]
+[ext_resource path="res://Assets/Characters/001/Attacking_005.png" type="Texture" id=33]
+[ext_resource path="res://Assets/Characters/001/Attacking_002.png" type="Texture" id=34]
+[ext_resource path="res://Assets/Characters/001/Attacking_006.png" type="Texture" id=35]
+[ext_resource path="res://Assets/Characters/001/Attacking_008.png" type="Texture" id=36]
+[ext_resource path="res://Assets/Characters/001/Attacking_009.png" type="Texture" id=37]
+[ext_resource path="res://Assets/Characters/001/Attacking_007.png" type="Texture" id=38]
+[ext_resource path="res://Assets/Characters/001/Attacking_000.png" type="Texture" id=39]
+[ext_resource path="res://Assets/Characters/001/Attacking_011.png" type="Texture" id=40]
+[ext_resource path="res://Assets/Characters/001/Attacking_010.png" type="Texture" id=41]
+[ext_resource path="res://Assets/Characters/001/Attacking_004.png" type="Texture" id=42]
+[ext_resource path="res://Assets/Characters/001/Attacking_003.png" type="Texture" id=43]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 1 ), ExtResource( 3 ), ExtResource( 2 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 31 ), ExtResource( 30 ), ExtResource( 7 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 18 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 17 ), ExtResource( 8 ), ExtResource( 19 ) ],
 "loop": true,
 "name": "walk",
-"speed": 15.0
+"speed": 45.0
 }, {
 "frames": [ ExtResource( 16 ), ExtResource( 13 ), ExtResource( 12 ), ExtResource( 10 ), ExtResource( 24 ), ExtResource( 20 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 21 ), ExtResource( 9 ), ExtResource( 14 ), ExtResource( 15 ) ],
 "loop": true,
 "name": "idle",
 "speed": 15.0
+}, {
+"frames": [ ExtResource( 39 ), ExtResource( 32 ), ExtResource( 34 ), ExtResource( 43 ), ExtResource( 42 ), ExtResource( 33 ), ExtResource( 35 ), ExtResource( 38 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 41 ), ExtResource( 40 ) ],
+"loop": false,
+"name": "attack",
+"speed": 20.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 67.4843, 90.9566 )
+[sub_resource type="CircleShape2D" id=2]
+radius = 40.8368
+
+[sub_resource type="CircleShape2D" id=3]
+radius = 85.7974
 
 [node name="Player" type="KinematicBody2D"]
-position = Vector2( 143.75, 169.5 )
+position = Vector2( -1.25, -2.5 )
 script = ExtResource( 11 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 2, -135 )
 frames = SubResource( 1 )
-animation = "walk"
-frame = 1
+animation = "attack"
+frame = 11
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 5.29666, 44.6911 )
+position = Vector2( 3.29666, -25.3089 )
 shape = SubResource( 2 )
+
+[node name="AttackPivot" type="Area2D" parent="."]
+position = Vector2( 2, -80 )
+
+[node name="Hitbox" type="CollisionShape2D" parent="AttackPivot"]
+position = Vector2( 126, 0 )
+shape = SubResource( 3 )
+[connection signal="body_entered" from="AttackPivot" to="." method="_on_AttackPivot_body_entered"]
