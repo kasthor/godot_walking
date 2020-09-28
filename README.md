@@ -3,4 +3,4 @@ Deforester
 
 Plot:
 --
-An angry skeleton hates trees and chop them off
+Forest is an angry skeleton that hates trees and chop them off
