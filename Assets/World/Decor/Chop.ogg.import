@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Chop.ogg-1e3934e0e8c508eea0edc64dc7b72d1f.oggstr"
+
+[deps]
+
+source_file="res://Assets/World/Decor/Chop.ogg"
+dest_files=[ "res://.import/Chop.ogg-1e3934e0e8c508eea0edc64dc7b72d1f.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

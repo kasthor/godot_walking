@@ -6,11 +6,12 @@ var attack
 onready var animation = get_node("AnimatedSprite")
 onready var attackPivot = get_node("AttackPivot")
 onready var hitBox = get_node("AttackPivot/Hitbox")
+onready var anger = get_node("Anger")
+onready var steps = get_node("Steps")
 
 func _ready():
 	animation.connect("animation_finished", self, "idle")
-	idle()
-	pass # Replace with function body.
+	# idle()
 
 func _process(delta):
 	var velocity = Vector2.ZERO
@@ -24,6 +25,9 @@ func _process(delta):
 			attack = true;
 			hitBox.disabled = false
 			animation.play("attack")
+			if not anger.playing:
+				anger.play() 
+			
 			
 	
 	move_and_slide(velocity.normalized() * speed) 
@@ -46,14 +50,18 @@ func player_animation(velocity):
 	
 	if attack == false :
 		if velocity.x != 0 or velocity.y != 0:
-			animation.play("walk") 
+			animation.play("walk")
+			if not steps.playing:
+				steps.play() 
 		else: 
-			idle()
-
+			pass
+			# idle()
+			
 func idle():
 	animation.play("idle")
 	hitBox.disabled = true
 	attack = false
+	steps.stop()
 
 
 func _on_AttackPivot_body_entered(body):

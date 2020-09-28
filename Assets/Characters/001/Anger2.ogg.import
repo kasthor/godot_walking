@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Anger2.ogg-0e2adacf48f2f577e6b25f3bd127e994.oggstr"
+
+[deps]
+
+source_file="res://Assets/Characters/001/Anger2.ogg"
+dest_files=[ "res://.import/Anger2.ogg-0e2adacf48f2f577e6b25f3bd127e994.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
