@@ -17,3 +17,4 @@ animation = "Rock04"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 6.83162, -14.0918 )
 shape = SubResource( 1 )
+disabled = true

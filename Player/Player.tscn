@@ -103,6 +103,7 @@ stream = ExtResource( 45 )
 visible = false
 frames = ExtResource( 46 )
 animation = "Graveyard01"
+flip_h = true
 
 [node name="ConvertingTimer" type="Timer" parent="."]
 
