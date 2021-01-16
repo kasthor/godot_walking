@@ -39,7 +39,17 @@ format = 1
 [node name="Player" parent="Objects" instance=ExtResource( 1 )]
 position = Vector2( -7.58374, -33.3831 )
 
-[node name="Camera2D" type="Camera2D" parent="Objects/Player"]
+[node name="Camera2D1" type="Camera2D" parent="Objects/Player"]
+current = true
+zoom = Vector2( 2, 2 )
+limit_left = -2560
+limit_top = -2560
+limit_right = 2560
+limit_bottom = 2560
+limit_smoothed = true
+smoothing_enabled = true
+
+[node name="Camera2D2" type="Camera2D" parent="Objects/Player"]
 current = true
 zoom = Vector2( 2, 2 )
 limit_left = -2560

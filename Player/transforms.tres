@@ -1,0 +1,233 @@
+[gd_resource type="SpriteFrames" load_steps=39 format=2]
+
+[ext_resource path="res://Assets/World/Decor/stump_03.png" type="Texture" id=1]
+[ext_resource path="res://Assets/World/Decor/tree_03.png" type="Texture" id=2]
+[ext_resource path="res://Assets/World/Decor/skull_01.png" type="Texture" id=3]
+[ext_resource path="res://Assets/World/Decor/spikes.png" type="Texture" id=4]
+[ext_resource path="res://Assets/World/Decor/tree_01.png" type="Texture" id=5]
+[ext_resource path="res://Assets/World/Decor/stump_02.png" type="Texture" id=6]
+[ext_resource path="res://Assets/World/Decor/skull_03.png" type="Texture" id=7]
+[ext_resource path="res://Assets/World/Decor/tree_02.png" type="Texture" id=8]
+[ext_resource path="res://Assets/World/Decor/skull_02.png" type="Texture" id=9]
+[ext_resource path="res://Assets/World/Decor/stump_01.png" type="Texture" id=10]
+[ext_resource path="res://Assets/World/Decor/rock_10.png" type="Texture" id=11]
+[ext_resource path="res://Assets/World/Decor/rock_11.png" type="Texture" id=12]
+[ext_resource path="res://Assets/World/Decor/rune_06.png" type="Texture" id=13]
+[ext_resource path="res://Assets/World/Decor/rock_01.png" type="Texture" id=14]
+[ext_resource path="res://Assets/World/Decor/rock_06.png" type="Texture" id=15]
+[ext_resource path="res://Assets/World/Decor/rock_08.png" type="Texture" id=16]
+[ext_resource path="res://Assets/World/Decor/rock_02.png" type="Texture" id=17]
+[ext_resource path="res://Assets/World/Decor/rock_09.png" type="Texture" id=18]
+[ext_resource path="res://Assets/World/Decor/rock_12.png" type="Texture" id=19]
+[ext_resource path="res://Assets/World/Decor/rune_01.png" type="Texture" id=20]
+[ext_resource path="res://Assets/World/Decor/rune_03.png" type="Texture" id=21]
+[ext_resource path="res://Assets/World/Decor/rock_05.png" type="Texture" id=22]
+[ext_resource path="res://Assets/World/Decor/rock_07.png" type="Texture" id=23]
+[ext_resource path="res://Assets/World/Decor/rune_04.png" type="Texture" id=24]
+[ext_resource path="res://Assets/World/Decor/rune_05.png" type="Texture" id=25]
+[ext_resource path="res://Assets/World/Decor/rune_07.png" type="Texture" id=26]
+[ext_resource path="res://Assets/World/Decor/grass_01.png" type="Texture" id=27]
+[ext_resource path="res://Assets/World/Decor/grass_02.png" type="Texture" id=28]
+[ext_resource path="res://Assets/World/Decor/grass_03.png" type="Texture" id=29]
+[ext_resource path="res://Assets/World/Decor/rune_02.png" type="Texture" id=30]
+[ext_resource path="res://Assets/World/Decor/rock_03.png" type="Texture" id=31]
+[ext_resource path="res://Assets/World/Decor/rock_04.png" type="Texture" id=32]
+[ext_resource path="res://Assets/World/Decor/grass_07.png" type="Texture" id=33]
+[ext_resource path="res://Assets/World/Decor/grass_08.png" type="Texture" id=34]
+[ext_resource path="res://Assets/World/Decor/graveyard.png" type="Texture" id=35]
+[ext_resource path="res://Assets/World/Decor/grass_05.png" type="Texture" id=36]
+[ext_resource path="res://Assets/World/Decor/grass_06.png" type="Texture" id=37]
+[ext_resource path="res://Assets/World/Decor/grass_04.png" type="Texture" id=38]
+
+[resource]
+animations = [ {
+"frames": [ ExtResource( 10 ) ],
+"loop": true,
+"name": "Stump01",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 35 ) ],
+"loop": true,
+"name": "Graveyard01",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 34 ) ],
+"loop": true,
+"name": "Grass08",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 15 ) ],
+"loop": true,
+"name": "Rock06",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 38 ) ],
+"loop": true,
+"name": "Grass04",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 37 ) ],
+"loop": true,
+"name": "Grass06",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ) ],
+"loop": true,
+"name": "Skull03",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ) ],
+"loop": true,
+"name": "Tree01",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 9 ) ],
+"loop": true,
+"name": "Skull02",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 28 ) ],
+"loop": true,
+"name": "Grass02",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 27 ) ],
+"loop": true,
+"name": "Grass01",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 19 ) ],
+"loop": true,
+"name": "Rock12",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 13 ) ],
+"loop": true,
+"name": "Rune06",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "Spikes01",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 16 ) ],
+"loop": true,
+"name": "Rock08",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ) ],
+"loop": true,
+"name": "Tree02",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 18 ) ],
+"loop": true,
+"name": "Rock09",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ) ],
+"loop": true,
+"name": "Stump02",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 21 ) ],
+"loop": true,
+"name": "Rune03",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 26 ) ],
+"loop": true,
+"name": "Rune07",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 24 ) ],
+"loop": true,
+"name": "Rune04",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 11 ) ],
+"loop": true,
+"name": "Rock10",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 25 ) ],
+"loop": true,
+"name": "Rune05",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 14 ) ],
+"loop": true,
+"name": "Rock01",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 20 ) ],
+"loop": true,
+"name": "Rune01",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 30 ) ],
+"loop": true,
+"name": "Rune02",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 36 ) ],
+"loop": true,
+"name": "Grass05",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "Skull01",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "Tree03",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 1 ) ],
+"loop": true,
+"name": "Stump03",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 33 ) ],
+"loop": true,
+"name": "Grass07",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 31 ) ],
+"loop": true,
+"name": "Rock03",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 22 ) ],
+"loop": true,
+"name": "Rock05",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 23 ) ],
+"loop": true,
+"name": "Rock07",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 29 ) ],
+"loop": true,
+"name": "Grass03",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 12 ) ],
+"loop": true,
+"name": "Rock11",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 32 ) ],
+"loop": true,
+"name": "Rock04",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 17 ) ],
+"loop": true,
+"name": "Rock02",
+"speed": 5.0
+} ]

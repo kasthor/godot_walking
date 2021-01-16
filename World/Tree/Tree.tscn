@@ -1,34 +1,29 @@
 [gd_scene load_steps=11 format=2]
 
-[ext_resource path="res://Assets/World/Decor/Stump3.png" type="Texture" id=1]
-[ext_resource path="res://Assets/World/Decor/Stump1.png" type="Texture" id=2]
-[ext_resource path="res://Assets/World/Decor/Tree2.png" type="Texture" id=3]
+[ext_resource path="res://Assets/World/Decor/stump_03.png" type="Texture" id=1]
+[ext_resource path="res://Assets/World/Decor/stump_01.png" type="Texture" id=2]
+[ext_resource path="res://Assets/World/Decor/tree_02.png" type="Texture" id=3]
 [ext_resource path="res://World/Tree/Tree.gd" type="Script" id=4]
-[ext_resource path="res://Assets/World/Decor/Tree1.png" type="Texture" id=5]
-[ext_resource path="res://Assets/World/Decor/Stump2.png" type="Texture" id=6]
-[ext_resource path="res://Assets/World/Decor/Tree3.png" type="Texture" id=7]
+[ext_resource path="res://Assets/World/Decor/tree_01.png" type="Texture" id=5]
+[ext_resource path="res://Assets/World/Decor/stump_02.png" type="Texture" id=6]
+[ext_resource path="res://Assets/World/Decor/tree_03.png" type="Texture" id=7]
 [ext_resource path="res://Assets/World/Decor/Chop.ogg" type="AudioStream" id=8]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 7 ) ],
-"loop": true,
-"name": "Tree3",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 3 ) ],
 "loop": true,
 "name": "Tree2",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 6 ) ],
-"loop": true,
-"name": "Stump2",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 5 ) ],
 "loop": true,
 "name": "Tree1",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ) ],
+"loop": true,
+"name": "Stump2",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 2 ) ],
@@ -40,21 +35,27 @@ animations = [ {
 "loop": true,
 "name": "Stump3",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ) ],
+"loop": true,
+"name": "Tree3",
+"speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 29.1893, 13.347 )
+[sub_resource type="CircleShape2D" id=2]
+radius = 14.4358
 
 [node name="Tree" type="KinematicBody2D"]
 script = ExtResource( 4 )
 
 [node name="Sprite" type="AnimatedSprite" parent="."]
-position = Vector2( 0, -113.102 )
+position = Vector2( -0.594604, -113.102 )
 frames = SubResource( 1 )
 animation = "Stump3"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 7.93701, -15.0803 )
+position = Vector2( 7.93701, -17.756 )
+rotation = 1.64934
 shape = SubResource( 2 )
 
 [node name="Chop" type="AudioStreamPlayer2D" parent="."]

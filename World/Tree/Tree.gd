@@ -31,6 +31,7 @@ func hurt():
 		sprite.animation = get_random_stump()
 		chop.play()
 		chopped = true
+		$CollisionShape2D.disabled = true
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):

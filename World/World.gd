@@ -5,10 +5,11 @@ extends Node2D
 # var a = 2
 # var b = "text"
 const Tree = preload("res://World/Tree/Tree.tscn")
+const Obj = preload("res://World/Objects/Objects.tscn")
 
 const MAP_SIZE = Vector2(20, 20)
 const CELL_SIZE = 256
-const TREE_DENSITY = 6
+var TREE_DENSITY = rand_range(5, 6)
 
 const MAP_OFFSET = MAP_SIZE / 2 * -1
 const MAP_START = Vector2.ZERO + MAP_OFFSET
@@ -24,19 +25,23 @@ var decor_count = 21
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	# randomize()
+	randomize()
 	init_road_noise()
 	init_tree_noise()
 
 	make_background()
 	make_road()
 	make_trees()
+	make_objects()
 	
-	init_camera()
+	init_cameras()
 	center_player()
 	
-func camera():
-	return get_node("Objects/Player/Camera2D")
+func camera1():
+	return get_node("Objects/Player/Camera2D1")
+	
+func camera2():
+	return get_node("Objects/Player/Camera2D2")
 	
 func player():
 	return get_node("Objects/Player")
@@ -56,11 +61,16 @@ func init_tree_noise():
 	tree_noise.octaves = 1.0
 	tree_noise.period = 12
 	
-func init_camera():
-	camera().limit_top = MAP_START.y * CELL_SIZE
-	camera().limit_bottom = MAP_END.y * CELL_SIZE
-	camera().limit_left = MAP_START.x * CELL_SIZE
-	camera().limit_right = MAP_END.x * CELL_SIZE
+func init_cameras():
+	camera1().limit_top = MAP_START.y * CELL_SIZE
+	camera1().limit_bottom = MAP_END.y * CELL_SIZE
+	camera1().limit_left = MAP_START.x * CELL_SIZE
+	camera1().limit_right = MAP_END.x * CELL_SIZE / 2
+	
+#	camera2().limit_top = MAP_START.y * CELL_SIZE
+#	camera2().limit_bottom = MAP_END.y * CELL_SIZE
+#	camera2().limit_left = MAP_START.x * CELL_SIZE / 2
+#	camera2().limit_right = MAP_END.x * CELL_SIZE
 	
 
 func center_player():
@@ -89,13 +99,27 @@ func make_trees():
 			if not is_road_tile(x,y):
 				make_trees_in_cell(x,y)
 	
-func make_trees_in_cell(x,y):
+func make_objects():
+	for x in range(MAP_START.x, MAP_END.x):
+		for y in range(MAP_START.y, MAP_END.y):
+			if not is_road_tile(x,y):
+				make_objects_in_cell(x,y)
+	
+func make_trees_in_cell(x, y):
 	for i in range(int(abs(tree_noise.get_noise_2d(x, y)) * TREE_DENSITY)):
 		var pos_x = x * CELL_SIZE + randi() % CELL_SIZE
 		var pos_y = y * CELL_SIZE + randi() % CELL_SIZE
 		var tree = Tree.instance()
 		tree.position = Vector2(pos_x, pos_y)
 		$Objects.add_child(tree)
+	
+func make_objects_in_cell(x, y):
+	for i in range(int(abs(tree_noise.get_noise_2d(x, y)) * TREE_DENSITY)):
+		var pos_x = x * CELL_SIZE + randi() % CELL_SIZE
+		var pos_y = y * CELL_SIZE + randi() % CELL_SIZE
+		var obj = Obj.instance()
+		obj.position = Vector2(pos_x, pos_y)
+		$Objects.add_child(obj)
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
